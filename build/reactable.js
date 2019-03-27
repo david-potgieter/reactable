@@ -1036,7 +1036,6 @@ window.ReactDOM["default"] = window.ReactDOM;
             _classCallCheck(this, Table);
 
             _get(Object.getPrototypeOf(Table.prototype), 'constructor', this).call(this, props);
-
             this.state = {
                 currentPage: this.props.currentPage ? this.props.currentPage : 0,
                 currentSort: {
@@ -1534,7 +1533,7 @@ window.ReactDOM["default"] = window.ReactDOM;
                     tableHeader,
                     _react['default'].createElement(
                         'tbody',
-                        { className: 'reactable-data', key: 'tbody' },
+                        { className: 'reactable-data', key: 'tbody', 'data-length': filteredChildren.length },
                         currentChildren.length > 0 ? currentChildren : noDataText
                     ),
                     pagination === true ? _react['default'].createElement(_paginator.Paginator, { colSpan: columns.length,
